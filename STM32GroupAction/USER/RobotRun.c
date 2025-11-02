@@ -12,6 +12,8 @@ bool fFrameRunFinish = TRUE;//每帧运行完毕标志位
 uint8 FrameIndexSum = 0;//一个动作组里面总共有多少动作
 uint8 FrameIndex = 0;//动作组里面某一动作的编号，从0开始
 
+bool g_SensorControl = FALSE; // 传感器控制使能标志
+
 
 void FullActRun(uint8 actFullnum,uint32 times)//初始化并运行新的动作
 {
@@ -96,8 +98,12 @@ uint16 ActSubFrameRun(uint8 fullActNum,uint8 frameIndex)
 }
 
 
-void TaskRobotRun(void)
+void  TaskRobotRun(void)
 {
+	if(g_SensorControl)
+	{
+		return; // 传感器控制模式下不执行动作组	
+	}
 
 	if(fRobotRun)
 	{

@@ -316,7 +316,7 @@ void TaskRun(void)
 	
 	TaskPCMsgHandle();
 	TaskBLEMsgHandle();
-	TaskRobotRun();
+	
 
 	if(KEY == 0)
 	{
@@ -331,6 +331,11 @@ void TaskRun(void)
 				if (keycount > 20)
 				{
 					keycount = 0;
+
+					g_SensorControl = TRUE;   //长按进入传感器控制模式
+					LED = !LED;
+
+
 					FullActRun(100,1);
 					return;
 				}
@@ -343,6 +348,8 @@ void TaskRun(void)
 			}
 		}
 	}
+
+	TaskRobotRun();
 	
 	if(Ps2TimeCount > 50)
 	{

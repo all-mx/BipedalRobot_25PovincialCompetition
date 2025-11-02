@@ -3,12 +3,12 @@
         {
             "name": "Target 1",
             "includePath": [
-                "d:\\Users\\Linjl\\Documents\\LS-6A窄足机器人\\开源版\\3.开发教程学习\\3.源码程序\\脱机运行多个动作组源码\\STM32GroupAction\\CORE",
-                "d:\\Users\\Linjl\\Documents\\LS-6A窄足机器人\\开源版\\3.开发教程学习\\3.源码程序\\脱机运行多个动作组源码\\STM32GroupAction\\STM32F10x_FWLib\\inc",
-                "d:\\Users\\Linjl\\Documents\\LS-6A窄足机器人\\开源版\\3.开发教程学习\\3.源码程序\\脱机运行多个动作组源码\\STM32GroupAction\\USER",
+                "d:\\Users\\Linjl\\Projects\\STM32Projects\\BipedalRobot_25PovincialCompetition\\STM32GroupAction\\CORE",
+                "d:\\Users\\Linjl\\Projects\\STM32Projects\\BipedalRobot_25PovincialCompetition\\STM32GroupAction\\STM32F10x_FWLib\\inc",
+                "d:\\Users\\Linjl\\Projects\\STM32Projects\\BipedalRobot_25PovincialCompetition\\STM32GroupAction\\USER",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "d:\\Users\\Linjl\\Documents\\LS-6A窄足机器人\\开源版\\3.开发教程学习\\3.源码程序\\脱机运行多个动作组源码\\STM32GroupAction\\STM32F10x_FWLib\\src"
+                "d:\\Users\\Linjl\\Projects\\STM32Projects\\BipedalRobot_25PovincialCompetition\\STM32GroupAction\\STM32F10x_FWLib\\src"
             ],
             "defines": [
                 "STM32F10X_MD",

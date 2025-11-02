@@ -1,11 +1,11 @@
 #ifndef _ROBOT_RUN_H_
 #define _ROBOT_RUN_H_
 
-
+extern bool g_SensorControl; //浼犳劅鍣ㄦ帶鍒舵爣蹇椾綅
 
 
 void TaskRobotRun(void);
-void FullActRun(uint8 actFullnum,uint32 times);//初始化并运行新的动作
+void FullActRun(uint8 actFullnum,uint32 times);//锟斤拷始锟斤拷锟斤拷锟斤拷锟斤拷锟铰的讹拷锟斤拷
 void FullActStop(void);
 
 

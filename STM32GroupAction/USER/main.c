@@ -1,5 +1,6 @@
 
 #include "include.h"
+#include "SensorIO.h"
 
 
 int main(void)
@@ -19,6 +20,9 @@ int main(void)
 	InitFlash();
 	InitMemory();
 	InitBusServoCtrl();
+
+	InitSensorIO(); // 初始化传感器 GPIO 与中断（PB4=DRDY, PB5..PB9=DATA0..DATA4，见 SensorIO.h）
+	
 	LED = LED_ON;
 	BusServoCtrl(1,SERVO_MOVE_TIME_WRITE,500,1000);
 	BusServoCtrl(2,SERVO_MOVE_TIME_WRITE,500,1000);
@@ -32,6 +36,9 @@ int main(void)
 	while(1)
 	{
 		TaskRun();			//主控制程序
+		
+		// 处理传感器包（由外部中断填充），放在主循环以避免 ISR 中做过多工作
+		Sensor_ProcessPacket();
 		
 		//以下是LED闪烁测试代码，默认情况下请将其注释掉不使用，当需要测试主板LED功能时再取消注释进行使用，使用完恢复注释
 		/*
